@@ -1,7 +1,17 @@
 <html>
-  <head>
-      <title>NABEEHA'S BLOG :)</title>
-      <h1>Nabeeha's Blog ¯\_(ツ)_/¯</h1>
-      <h2>Welcome to my very first blog post!!!</h2>
-      <p>This is my very <em>first</em> blog post! I'm excited to share my entries with you all!</p>
-  </html>
+    <head>
+        <title>Django Girls blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="">Nabeeha's Blog¯\_(ツ)_/¯</a></h1>
+        </div>
+
+        {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+    </body>
